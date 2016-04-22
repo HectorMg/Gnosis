@@ -1,0 +1,66 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// Colors
+
+$peter-river: #3498db;
+$belizehole: #2980b9;
+$wf-black: #3F3F3F;
+$wf-gray: #EEEEEE;
+$amethyst: #9b59b6;
+$wysteria: #8e44ad;
+$pomegranate: #c0392b;
+$sunflower: #f1c40f;
+$turquoise: #1abc9c;
+$emerald: #2ecc71;
+
+body{
+  background-color: $wf-black;
+}
+
+
+
+//Page organization
+
+.main-container{
+  border-radius: 5px;
+  margin-top: 5vh;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+//Navigation
+
+#navbar{
+  width: 100%;
+  background-color: $emerald;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+.navbar-links ul{
+  margin: 0px;
+}
+.navbar-links ul > li{
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar-links a{
+  font-size: 1.2em;
+  color: white;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  list-style: none;
+  display: inline-block;
+  padding: 7px;
+  margin-right: 7px;
+  border-radius: 5px;
+    &:hover{
+      background-color: $turquoise;
+      text-decoration: none;
+    }
+}
