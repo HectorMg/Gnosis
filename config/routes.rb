@@ -1,56 +1,34 @@
-Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+source 'https://rubygems.org'
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+gem 'rails',                    '4.2.2'
+gem 'bcrypt',                   '3.1.7'
+gem 'faker',                    '1.4.2'
+gem 'will_paginate',            '3.0.7'
+gem 'bootstrap-will_paginate',  '0.0.10'
+gem 'bootstrap-sass',           '3.2.0.0'
+gem 'sass-rails',               '5.0.2'
+gem 'uglifier',                 '2.5.3'
+gem 'coffee-rails',             '4.1.0'
+gem 'jquery-rails',             '4.0.3'
+gem 'turbolinks',               '2.3.0'
+gem 'jbuilder',                 '2.2.3'
+gem 'sdoc',                     '0.4.0', group: :doc
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+group :development, :test do
+  gem 'sqlite3',     '1.3.9'
+  gem 'byebug',      '3.4.0'
+  gem 'web-console', '2.0.0.beta3'
+  gem 'spring',      '1.1.3'
+end
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+group :test do
+  gem 'minitest-reporters', '1.0.5'
+  gem 'mini_backtrace',     '0.1.3'
+  gem 'guard-minitest',     '2.3.1'
+end
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+group :production do
+  gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+  gem 'puma',           '2.11.1'
 end
